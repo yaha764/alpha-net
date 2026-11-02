@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101c3a">
+  <meta name="description" content="אלפא נט — כל מה שקורה בקהילת בית הספר, במקום אחד.">
+  <title>אלפא נט | חדשות בית הספר</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <style>
+    :root{--navy:#101c3a;--navy-2:#17284d;--blue:#3767f5;--blue-2:#5a83ff;--ink:#18233e;--muted:#68748e;--line:#e7ebf3;--paper:#f5f7fc;--white:#fff;--green:#159a72;--shadow:0 16px 44px rgba(22,39,81,.09);--radius:22px}
+    *{box-sizing:border-box}[hidden]{display:none!important}html{scroll-behavior:smooth;scroll-padding-top:115px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Heebo,Arial,sans-serif}button,input,textarea,select{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer}a{color:inherit;text-decoration:none}.wrap{width:min(1180px,calc(100% - 40px));margin-inline:auto}.ticker{background:#0b1530;color:#dce5ff;overflow:hidden;display:flex;align-items:center;min-height:38px;font-size:13px}.ticker-label{align-self:stretch;display:flex;align-items:center;gap:8px;padding:0 18px;background:var(--blue);color:#fff;font-weight:800;white-space:nowrap;z-index:1}.ticker-track{overflow:hidden;flex:1;white-space:nowrap}.ticker-content{display:inline-flex;align-items:center;min-width:max-content;animation:marquee 32s linear infinite}.ticker:hover .ticker-content{animation-play-state:paused}.ticker-item{padding:0 26px;position:relative}.ticker-item:after{content:'✦';position:absolute;left:0;color:#91a9ff}.ticker-empty{padding-inline:20px;color:#b9c6e6}@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(50%)}}
+    .site-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(224,230,242,.8)}.nav-row{min-height:83px;display:flex;align-items:center;gap:28px;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;min-width:max-content}.brand-mark{width:45px;height:45px;border-radius:15px;display:grid;place-items:center;color:#fff;font-size:25px;font-weight:900;background:linear-gradient(145deg,#5b80ff,#3156df);box-shadow:0 8px 18px rgba(55,103,245,.27);transform:rotate(-3deg)}.brand-copy{display:flex;flex-direction:column;line-height:1.1}.brand-name{font-size:25px;font-weight:900;letter-spacing:-.8px;color:var(--navy)}.brand-tag{font-size:11px;color:var(--muted);font-weight:500;margin-top:5px}.nav-links{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:700;color:#59647d}.nav-links a{padding:10px 0;border-bottom:2px solid transparent;transition:.2s}.nav-links a:hover,.nav-links a.active{color:var(--blue);border-color:var(--blue)}.nav-actions{display:flex;align-items:center;gap:10px}.search-box{display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:#f8faff;border-radius:13px;padding:0 12px;height:43px;min-width:190px}.search-box i{font-size:18px;color:#74809b}.search-box input{width:100%;min-width:0;border:0;outline:0;background:transparent;color:var(--ink);font-size:13px}.primary-btn,.soft-btn{border:0;display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:13px;padding:12px 16px;font-size:13px;font-weight:800;transition:transform .18s,box-shadow .18s,background .18s;white-space:nowrap}.primary-btn{background:var(--blue);color:white;box-shadow:0 8px 18px rgba(55,103,245,.2)}.primary-btn:hover{background:#2854df;transform:translateY(-1px);box-shadow:0 11px 22px rgba(55,103,245,.25)}.soft-btn{background:#eef2ff;color:#3156d9}.soft-btn:hover{background:#e2e9ff}.mobile-menu-btn{display:none;width:43px;height:43px;border:1px solid var(--line);background:white;border-radius:13px;color:var(--navy);font-size:21px}
+    main{padding-top:30px;padding-bottom:56px}.welcome-strip{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:2px 0 24px}.eyebrow{display:flex;align-items:center;gap:8px;color:var(--blue);font-size:12px;font-weight:900;letter-spacing:.3px}.live-dot{width:8px;height:8px;border-radius:50%;background:#21b88a;box-shadow:0 0 0 4px #d9f7eb}.welcome-title{font-size:clamp(24px,3vw,34px);letter-spacing:-1px;font-weight:900;line-height:1.25;margin:7px 0 4px;color:var(--navy)}.welcome-sub{margin:0;color:var(--muted);font-size:14px}.today-date{display:flex;align-items:center;gap:9px;padding:11px 15px;background:white;border:1px solid var(--line);border-radius:14px;color:#697590;font-size:13px;font-weight:600;white-space:nowrap}.today-date i{font-size:18px;color:var(--blue)}.hero{position:relative;min-height:400px;overflow:hidden;border-radius:27px;background:linear-gradient(115deg,#17264b,#3156d9);box-shadow:var(--shadow);isolation:isolate}.hero:before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 78% 20%,rgba(118,157,255,.42),transparent 27%),radial-gradient(circle at 6% 90%,rgba(50,91,233,.42),transparent 36%);z-index:-1}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;min-height:400px}.hero-copy{padding:clamp(28px,5vw,58px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center;color:#fff}.hero-pill{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.18);padding:7px 12px;border-radius:50px;font-size:12px;font-weight:800}.hero-copy h1{font-size:clamp(30px,4vw,49px);line-height:1.16;letter-spacing:-1.5px;margin:20px 0 13px;font-weight:900;max-width:560px}.hero-copy p{font-size:16px;color:#d9e2ff;line-height:1.8;margin:0 0 22px;max-width:540px}.hero-meta{display:flex;align-items:center;gap:14px;color:#c6d3ff;font-size:12px;margin-bottom:22px}.hero-meta span{display:flex;align-items:center;gap:6px}.hero-cta{background:white;color:#20366e;box-shadow:none}.hero-cta:hover{background:#eef3ff}.hero-visual{position:relative;min-height:310px;overflow:hidden;align-self:stretch}.hero-visual:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#17264b 0%,rgba(23,38,75,.15) 50%,rgba(23,38,75,.02) 100%);z-index:1}.hero-visual img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;opacity:.88}.hero-orb{position:absolute;z-index:2;width:190px;height:190px;border-radius:50%;border:1px solid rgba(255,255,255,.26);right:15%;top:15%;box-shadow:0 0 0 26px rgba(255,255,255,.035),0 0 0 52px rgba(255,255,255,.025)}.hero-empty{display:flex;flex-direction:column;align-items:flex-start;gap:8px}.hero-empty .hero-copy h1{margin-top:18px}
+    .section-block{margin-top:44px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:18px}.section-title-wrap{display:flex;align-items:center;gap:12px}.section-icon{width:43px;height:43px;display:grid;place-items:center;border-radius:14px;background:#e9eeff;color:var(--blue);font-size:22px}.section-title{font-size:23px;font-weight:900;letter-spacing:-.5px;margin:0;color:var(--navy)}.section-desc{font-size:12px;color:var(--muted);margin:3px 0 0}.section-link{display:inline-flex;align-items:center;gap:6px;color:var(--blue);font-weight:800;font-size:13px}.category-chip-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}.category-chip{border:1px solid var(--line);background:white;color:#596783;padding:8px 14px;border-radius:50px;font-size:12px;font-weight:800;transition:.2s}.category-chip:hover,.category-chip.active{background:var(--navy);border-color:var(--navy);color:#fff}.content-grid{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:28px;align-items:start}.article-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.article-card{background:white;border:1px solid #e9edf5;border-radius:19px;overflow:hidden;display:flex;flex-direction:column;min-width:0;box-shadow:0 5px 18px rgba(22,39,81,.035);transition:transform .22s,border-color .22s,box-shadow .22s}.article-card:hover{transform:translateY(-4px);border-color:#d2dcff;box-shadow:0 16px 32px rgba(22,39,81,.1)}.article-card-button{padding:0;border:0;background:transparent;text-align:right;width:100%;display:flex;flex-direction:column;height:100%;color:inherit}.article-image{height:190px;background:#e8edfa;position:relative;overflow:hidden}.article-image img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.article-card:hover .article-image img{transform:scale(1.045)}.image-label{position:absolute;top:13px;right:13px;border-radius:9px;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);padding:6px 10px;font-weight:900;font-size:11px;color:var(--blue)}.article-body{padding:18px 19px 17px;display:flex;flex-direction:column;flex:1}.article-body h3{font-size:18px;line-height:1.4;margin:0 0 8px;font-weight:900;color:var(--navy);letter-spacing:-.2px}.article-body p{font-size:13px;line-height:1.75;color:#6b7690;margin:0 0 17px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.article-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;border-top:1px solid #f0f2f8;padding-top:13px;color:#8892a8;font-size:11px}.read-more{display:inline-flex;align-items:center;gap:4px;color:var(--blue);font-weight:900}.sidebar{display:flex;flex-direction:column;gap:20px}.side-panel{background:white;border:1px solid #e8edf6;border-radius:20px;padding:21px;box-shadow:0 5px 18px rgba(22,39,81,.035)}.side-title{display:flex;align-items:center;gap:10px;border-bottom:1px solid #edf0f6;padding-bottom:15px;margin-bottom:16px}.side-title-icon{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:#f0f3ff;color:var(--blue);font-size:19px}.side-title h3{font-size:17px;margin:0;font-weight:900;color:var(--navy)}.side-title p{font-size:11px;margin:1px 0 0;color:#8993a8}.side-list{display:flex;flex-direction:column;gap:15px}.side-item{display:grid;grid-template-columns:77px minmax(0,1fr);gap:12px;padding-bottom:15px;border-bottom:1px solid #f0f2f8}.side-item:last-child{padding-bottom:0;border-bottom:0}.side-thumb{width:77px;height:73px;overflow:hidden;border-radius:12px;background:#edf0f8}.side-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .3s}.side-item:hover .side-thumb img{transform:scale(1.08)}.side-item button{border:0;background:transparent;text-align:right;padding:0;color:var(--ink);width:100%}.side-item h4{font-size:13px;line-height:1.45;margin:0 0 7px;font-weight:900}.side-item p{font-size:11px;color:#8791a7;margin:0}.campus-card{padding:23px;border-radius:20px;color:white;background:linear-gradient(140deg,#1a2c55,#345bdc);position:relative;overflow:hidden}.campus-card:after{content:'α';font-size:150px;font-weight:900;line-height:1;position:absolute;left:-8px;bottom:-44px;color:rgba(255,255,255,.07)}.campus-card .mini-label{font-size:11px;color:#c6d4ff;font-weight:800}.campus-card h3{font-size:23px;line-height:1.22;font-weight:900;margin:10px 0}.campus-card p{font-size:12px;line-height:1.8;color:#e1e8ff;margin:0 0 18px}.campus-card .campus-link{position:relative;z-index:1;display:inline-flex;align-items:center;gap:7px;background:white;color:#1e3470;padding:9px 12px;border-radius:10px;font-size:12px;font-weight:900}.empty-state{grid-column:1/-1;border:1px dashed #cdd6e8;border-radius:18px;background:rgba(255,255,255,.66);padding:34px 20px;text-align:center;color:#7b86a0}.empty-state i{display:block;font-size:34px;color:#9aa8c7;margin-bottom:8px}.empty-state strong{display:block;color:var(--navy);font-size:16px;margin-bottom:4px}.empty-state span{font-size:12px}.demo-note{display:flex;align-items:center;gap:8px;margin-top:22px;padding:12px 15px;border:1px solid #d9e3ff;background:#edf2ff;border-radius:13px;color:#38539d;font-size:12px}.demo-note i{font-size:18px;flex-shrink:0}.footer{background:#0c1733;color:#e8eeff;margin-top:22px;padding:42px 0 22px}.footer-inner{display:flex;align-items:flex-start;justify-content:space-between;gap:35px}.footer-brand{display:flex;flex-direction:column;gap:10px;max-width:390px}.footer-brand .brand-name{color:#fff}.footer-brand p{font-size:12px;line-height:1.8;color:#aebbdc;margin:0}.footer-links{display:flex;gap:20px;flex-wrap:wrap;font-size:12px;color:#c7d2ee}.footer-links a:hover{color:white}.footer-bottom{border-top:1px solid rgba(255,255,255,.11);padding-top:17px;margin-top:28px;color:#8493b8;font-size:11px;display:flex;justify-content:space-between;gap:14px}
+    .modal-backdrop{position:fixed;inset:0;background:rgba(7,14,32,.68);backdrop-filter:blur(7px);z-index:60;display:none;align-items:center;justify-content:center;padding:18px}.modal-backdrop.open{display:flex}.modal{background:white;border-radius:22px;width:min(690px,100%);max-height:min(92vh,900px);overflow:auto;box-shadow:0 25px 90px rgba(0,0,0,.28);animation:modal-in .18s ease-out}.modal-header{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:19px 23px;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);z-index:2}.modal-header h2{font-size:19px;font-weight:900;margin:0;color:var(--navy)}.icon-btn{width:38px;height:38px;display:grid;place-items:center;border:1px solid var(--line);border-radius:12px;background:white;color:#6f7991;font-size:20px}.icon-btn:hover{background:#fff0f0;color:#c33}.modal-content{padding:23px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{display:flex;flex-direction:column;gap:7px;min-width:0}.field.full{grid-column:1/-1}.field label{font-size:12px;font-weight:900;color:#4b5874}.field input,.field select,.field textarea{width:100%;border:1px solid #dfe5f0;border-radius:12px;padding:12px 13px;background:#fbfcff;color:var(--ink);outline:0;transition:border .18s,box-shadow .18s}.field input:focus,.field select:focus,.field textarea:focus{border-color:#7190ff;box-shadow:0 0 0 3px #e5ebff}.field textarea{resize:vertical;min-height:110px;line-height:1.7}.field small{font-size:11px;color:#8792a9}.form-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:20px;margin-top:20px;border-top:1px solid var(--line)}.status{display:none;padding:12px 14px;border-radius:12px;font-size:12px;font-weight:700;margin-bottom:16px}.status.show{display:block}.status.success{background:#e5f8ef;color:#137451}.status.error{background:#fff0ef;color:#b63330}.article-card-button{height:auto;flex:1}.article-manage{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 16px;border-top:1px solid #eef1f8;background:#fcfdff}.article-author{font-size:11px;color:#7c87a0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.edit-article-btn{display:inline-flex;align-items:center;gap:6px;border:1px solid #dbe4ff;background:#eef2ff;color:#3156d9;border-radius:9px;padding:7px 10px;font-size:11px;font-weight:900;white-space:nowrap}.edit-article-btn:hover{background:#dfe7ff}.article-manage-actions{display:flex;align-items:center;gap:7px;flex-shrink:0}.delete-article-btn{display:inline-flex;align-items:center;gap:6px;border:1px solid #ffd6d3;background:#fff0ef;color:#b63330;border-radius:9px;padding:7px 10px;font-size:11px;font-weight:900;white-space:nowrap}.delete-article-btn:hover{background:#ffe0dd}.reader-actions{display:flex;justify-content:flex-start;margin-top:22px;padding-top:16px;border-top:1px solid var(--line)}.article-reader-image{width:100%;max-height:310px;object-fit:cover;border-radius:15px;background:#edf1fa}.reader-category{display:inline-flex;background:#eaf0ff;color:#3156d9;border-radius:8px;padding:6px 10px;font-size:11px;font-weight:900;margin-top:18px}.reader-title{font-size:clamp(25px,4vw,36px);line-height:1.3;font-weight:900;letter-spacing:-.7px;color:var(--navy);margin:12px 0}.reader-subtitle{font-size:16px;line-height:1.8;color:#65718b;margin:0 0 17px}.reader-meta{font-size:12px;color:#919ab0;margin-bottom:19px;display:flex;align-items:center;gap:7px}.reader-content{font-size:15px;line-height:2;color:#3d4964;white-space:pre-wrap;overflow-wrap:anywhere}.loading{display:flex;align-items:center;justify-content:center;gap:12px;padding:50px 20px;color:#6b7793}.spinner{width:21px;height:21px;border:3px solid #dce4ff;border-top-color:var(--blue);border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}@keyframes modal-in{from{opacity:0;transform:translateY(8px) scale(.99)}to{opacity:1;transform:none}}.toast{position:fixed;bottom:20px;left:20px;z-index:100;max-width:min(400px,calc(100% - 40px));padding:13px 17px;background:#132446;color:#fff;border-radius:13px;box-shadow:var(--shadow);font-size:13px;opacity:0;pointer-events:none;transform:translateY(10px);transition:.25s}.toast.show{opacity:1;transform:translateY(0)}
+    @media(max-width:1050px){.nav-row{gap:15px}.nav-links{gap:13px}.search-box{min-width:150px}.content-grid{grid-template-columns:minmax(0,1fr) 280px}.hero-grid{grid-template-columns:1fr .8fr}}
+    @media(max-width:850px){.nav-row{min-height:72px;flex-wrap:wrap}.mobile-menu-btn{display:grid;place-items:center}.nav-links{display:none;order:4;width:100%;padding:0 0 15px;flex-wrap:wrap;gap:8px 18px}.nav-links.open{display:flex}.nav-links a{padding:6px 0}.nav-actions{margin-right:auto}.search-box{min-width:130px}.hero-grid{grid-template-columns:1fr}.hero{min-height:auto}.hero-copy{padding:32px}.hero-visual{position:absolute;inset:0 30% 0 0;opacity:.35;z-index:-1}.hero-visual:before{background:linear-gradient(90deg,#17264b 0%,rgba(23,38,75,.25) 100%)}.content-grid{grid-template-columns:1fr}.sidebar{display:grid;grid-template-columns:1fr 1fr}.campus-card{grid-column:1/-1}.article-image{height:180px}}
+    @media(max-width:600px){.wrap{width:calc(100% - 28px)}.brand-mark{width:40px;height:40px;border-radius:13px}.brand-name{font-size:22px}.brand-tag{font-size:10px}.nav-row{gap:10px}.nav-actions{gap:7px}.search-box{width:42px;min-width:42px;padding:0;justify-content:center;border:0;background:#f1f4fc}.search-box i{font-size:20px}.search-box input{width:0;display:none}.search-box.expanded{position:absolute;top:75px;right:14px;left:14px;width:auto;min-width:0;padding:0 12px;background:white;border:1px solid var(--line);box-shadow:var(--shadow);z-index:4}.search-box.expanded input{display:block;width:100%}.add-article-label{display:none}.primary-btn{padding:11px 12px}.welcome-strip{align-items:flex-start}.today-date{font-size:11px;padding:9px;gap:5px}.today-date i{font-size:15px}.welcome-title{font-size:26px}.welcome-sub{font-size:12px}.hero{border-radius:20px}.hero-copy{padding:27px 22px}.hero-copy h1{font-size:31px}.hero-copy p{font-size:14px}.hero-visual{inset:0 14% 0 0}.section-title{font-size:20px}.section-icon{width:38px;height:38px}.article-grid{grid-template-columns:1fr;gap:13px}.article-image{height:200px}.article-body{padding:16px}.article-body h3{font-size:17px}.sidebar{grid-template-columns:1fr}.campus-card{grid-column:auto}.section-block{margin-top:34px}.section-head{align-items:center}.footer-inner{flex-direction:column;gap:24px}.footer-bottom{flex-direction:column;gap:6px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.modal-backdrop{padding:9px}.modal{border-radius:17px;max-height:95vh}.modal-header,.modal-content{padding:17px}.form-footer{align-items:stretch;flex-direction:column-reverse}.form-footer .primary-btn{width:100%}.ticker-label{padding:0 12px}.ticker{font-size:12px}.welcome-strip{gap:8px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <div class="ticker" aria-label="מבזקי האתר">
+    <div class="ticker-label"><i class="ph ph-broadcast" aria-hidden="true"></i> מבזקים</div>
+    <div class="ticker-track"><div class="ticker-content" id="ticker-content"><span class="ticker-empty">ברוכים הבאים לאלפא נט</span></div></div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <div class="nav-row">
+        <a class="brand" href="#top" aria-label="אלפא נט — לעמוד הראשי">
+          <span class="brand-mark">α</span>
+          <span class="brand-copy"><span class="brand-name">אלפא נט</span><span class="brand-tag">הקול של קהילת בית הספר</span></span>
+        </a>
+        <nav class="nav-links" id="nav-links" aria-label="ניווט ראשי">
+          <a class="active" href="#top" data-nav-home>ראשי</a>
+          <a href="#all-news" data-nav-category="news">חדשות</a>
+          <a href="#all-news" data-nav-category="sports">ספורט</a>
+          <a href="#all-news" data-nav-category="opinions">דעות וטורים</a>
+          <a href="#all-news" data-nav-category="culture">תרבות ופנאי</a>
+        </nav>
+        <div class="nav-actions">
+          <label class="search-box" id="search-box" aria-label="חיפוש כתבות">
+            <i class="ph ph-magnifying-glass" aria-hidden="true"></i>
+            <input id="search-input" type="search" placeholder="חיפוש כתבות..." autocomplete="off">
+          </label>
+          <button class="primary-btn" type="button" id="open-editor"><i class="ph ph-plus-circle" aria-hidden="true"></i><span class="add-article-label">הוסף כתבה</span></button>
+          <button class="mobile-menu-btn" type="button" id="mobile-menu-btn" aria-label="פתיחת תפריט" aria-expanded="false"><i class="ph ph-list"></i></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap" id="top">
+    <div class="welcome-strip">
+      <div>
+        <div class="eyebrow"><span class="live-dot"></span> הבית הדיגיטלי של בית הספר</div>
+        <h2 class="welcome-title">מה חדש אצלנו?</h2>
+        <p class="welcome-sub">הסיפורים, ההישגים והאנשים שהופכים את בית הספר לקהילה.</p>
+      </div>
+      <div class="today-date"><i class="ph ph-calendar-dots" aria-hidden="true"></i><span id="today-date">טוען תאריך...</span></div>
+    </div>
+
+    <div id="loading-state" class="loading"><span class="spinner" aria-hidden="true"></span><span>מכינים לכם את העדכונים האחרונים...</span></div>
+    <div id="content-container" hidden>
+      <section id="hero-section" class="hero" aria-label="הכתבה הראשית"></section>
+      <section class="section-block" id="all-news">
+        <div class="section-head">
+          <div class="section-title-wrap"><span class="section-icon"><i class="ph ph-newspaper-clipping" aria-hidden="true"></i></span><div><h2 class="section-title">הכתבות האחרונות</h2><p class="section-desc" id="result-summary">הסיפורים החדשים בקהילה שלנו</p></div></div>
+          <a class="section-link" href="#category-news">לכל המדורים <i class="ph ph-arrow-left" aria-hidden="true"></i></a>
+        </div>
+        <div class="category-chip-row" id="category-filters">
+          <button class="category-chip active" type="button" data-category="all">הכול</button>
+          <button class="category-chip" type="button" data-category="news">חדשות</button>
+          <button class="category-chip" type="button" data-category="sports">ספורט</button>
+          <button class="category-chip" type="button" data-category="opinions">דעות וטורים</button>
+          <button class="category-chip" type="button" data-category="culture">תרבות ופנאי</button>
+        </div>
+        <div class="content-grid">
+          <div class="article-grid" id="news-grid"></div>
+          <aside class="sidebar">
+            <section class="side-panel">
+              <div class="side-title"><span class="side-title-icon"><i class="ph ph-chat-circle-text" aria-hidden="true"></i></span><div><h3 id="category-opinions">דעות וטורים</h3><p>רעיונות ששווה להקשיב להם</p></div></div>
+              <div class="side-list" id="opinions-list"></div>
+            </section>
+            <section class="side-panel">
+              <div class="side-title"><span class="side-title-icon"><i class="ph ph-palette" aria-hidden="true"></i></span><div><h3 id="category-culture">תרבות ופנאי</h3><p>יוצרים, אירועים והשראה</p></div></div>
+              <div class="side-list" id="culture-list"></div>
+            </section>
+            <section class="campus-card">
+              <span class="mini-label">ALPHA NET · הקהילה שלנו</span>
+              <h3>יש לכם סיפור<br>שכולם צריכים להכיר?</h3>
+              <p>פרויקט חדש, הישג מרשים או רעיון לכתבה — הבמה של אלפא נט נועדה לקולות של הקהילה.</p>
+              <button class="campus-link" type="button" id="campus-submit">הציעו כתבה <i class="ph ph-arrow-left" aria-hidden="true"></i></button>
+            </section>
+          </aside>
+        </div>
+        <div id="demo-note" class="demo-note" hidden><i class="ph ph-info" aria-hidden="true"></i><span>האתר פועל כרגע במצב הדגמה. כתבות חדשות נשמרות בדפדפן הזה בלבד. כדי לשתף אותן עם כולם יש להגדיר חיבור Firebase והרשאות מתאימות.</span></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a class="brand" href="#top"><span class="brand-mark">α</span><span class="brand-copy"><span class="brand-name">אלפא נט</span><span class="brand-tag" style="color:#aebbdc">הקול של קהילת בית הספר</span></span></a>
+          <p>מרכז התוכן הבית־ספרי שמביא לקדמת הבמה את החדשות, היוזמות והכישרונות של התלמידים והצוות.</p>
+        </div>
+        <div class="footer-links"><a href="#top" data-nav-home>ראשי</a><a href="#all-news" data-nav-category="news">חדשות</a><a href="#all-news" data-nav-category="sports">ספורט</a><a href="#all-news" data-nav-category="opinions">דעות וטורים</a><a href="#all-news" data-nav-category="culture">תרבות ופנאי</a></div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="current-year"></span> אלפא נט · כל הזכויות שמורות</span><span>נבנה עבור קהילת בית הספר</span></div>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="reader-modal" role="dialog" aria-modal="true" aria-labelledby="reader-title">
+    <div class="modal">
+      <div class="modal-header"><h2>אלפא נט · כתבה</h2><button class="icon-btn" type="button" data-close="reader-modal" aria-label="סגירת הכתבה"><i class="ph ph-x"></i></button></div>
+      <div class="modal-content" id="reader-content"></div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="editor-modal" role="dialog" aria-modal="true" aria-labelledby="editor-title">
+    <div class="modal">
+      <div class="modal-header"><h2 id="editor-title"><i class="ph ph-note-pencil" style="color:var(--blue)"></i> פרסום כתבה חדשה</h2><button class="icon-btn" type="button" data-close="editor-modal" aria-label="סגירת עורך הכתבות"><i class="ph ph-x"></i></button></div>
+      <div class="modal-content">
+        <div id="admin-status" class="status" role="status" aria-live="polite"></div>
+        <form id="add-article-form">
+          <div class="form-grid">
+            <div class="field full"><label for="form-title">כותרת הכתבה *</label><input id="form-title" name="title" required maxlength="140" placeholder="כתבו כותרת מעניינת וברורה"></div>
+            <div class="field"><label for="form-author-name">שם הכותב *</label><input id="form-author-name" name="authorName" required maxlength="80" placeholder="מי כתב את הכתבה?"></div>
+            <div class="field full"><label for="form-subtitle">תקציר / כותרת משנה</label><textarea id="form-subtitle" name="subtitle" rows="2" maxlength="300" placeholder="בכמה מילים — על מה הכתבה?"></textarea></div>
+            <div class="field"><label for="form-category">מדור *</label><select id="form-category" name="category" required><option value="news">חדשות בית הספר</option><option value="sports">ספורט</option><option value="opinions">דעות וטורים</option><option value="culture">תרבות ופנאי</option></select></div>
+            <div class="field"><label for="form-featured">מיקום באתר</label><select id="form-featured" name="featured"><option value="false">כתבה רגילה</option><option value="true">כתבה ראשית</option></select></div>
+            <div class="field full"><label for="form-image-file">העלאת תמונה מהמכשיר (לא חובה)</label><input id="form-image-file" name="imageFile" type="file" accept="image/*"><small>בחרו תמונה מהמחשב או מהטלפון. התמונה תכווץ אוטומטית כדי להתאים לפרסום.</small><div id="image-preview-wrap" hidden style="margin-top:10px"><img id="image-preview" alt="תצוגה מקדימה של התמונה" style="display:block;max-width:100%;max-height:220px;border-radius:12px;object-fit:contain"><button type="button" id="remove-image-btn" class="secondary-btn" style="margin-top:8px">הסרת התמונה</button></div></div>
+            <div class="field full"><label for="form-content">תוכן הכתבה *</label><textarea id="form-content" name="content" rows="7" required maxlength="20000" placeholder="כתבו כאן את תוכן הכתבה המלא..."></textarea></div>
+          </div>
+          <div class="form-footer"><span style="font-size:11px;color:#7d88a0">* שדות חובה</span><button class="primary-btn" type="submit" id="submit-btn"><i class="ph ph-paper-plane-tilt"></i> פרסום כתבה</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal-backdrop" id="password-modal" role="dialog" aria-modal="true" aria-labelledby="password-title">
+    <div class="modal" style="width:min(430px,100%)">
+      <div class="modal-header"><h2 id="password-title"><i class="ph ph-lock-key" style="color:var(--blue)"></i> כניסה למצב עריכה</h2><button class="icon-btn" type="button" data-close="password-modal" aria-label="סגירת חלון הסיסמה"><i class="ph ph-x"></i></button></div>
+      <div class="modal-content">
+        <p style="margin:0 0 16px;color:var(--muted);font-size:14px;line-height:1.7">כדי לפרסם כתבה או לערוך כתבה קיימת, צריך להזין את סיסמת העורך.</p>
+        <div id="password-status" class="status" role="alert" aria-live="polite"></div>
+        <form id="editor-password-form">
+          <div class="field"><label for="editor-password">סיסמת עורך</label><input id="editor-password" type="password" dir="ltr" autocapitalize="characters" spellcheck="false" autocomplete="current-password" required placeholder="הקלידו את סיסמת העורך"></div>
+          <div class="form-footer"><span style="font-size:11px;color:#7d88a0"><i class="ph ph-shield-check"></i> המצב פעיל עד רענון הדף</span><button class="primary-btn" type="submit"><i class="ph ph-lock-key-open"></i> כניסה למצב עריכה</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script type="module">
+    // Firebase modules are loaded only when a valid Firebase configuration exists.
+    // This keeps the site usable as a local HTML preview without leaving it stuck on loading.
+    let initializeApp, getAuth, signInAnonymously, signInWithCustomToken;
+    let getFirestore, collection, addDoc, onSnapshot, doc, updateDoc, deleteDoc;
+
+    const $ = (selector, root = document) => root.querySelector(selector);
+    const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+    const STORE_KEY = 'alpha-net-demo-articles-v1';
+    const LEGACY_CLEANUP_KEY = 'alpha-net-legacy-articles-cleared-v2';
+    // Store only a SHA-256 digest in the page; the password itself is not displayed in the UI or source.
+    // Front-end checks are not a substitute for Firebase Security Rules or server-side authentication.
+    const EDITOR_PASSWORD_SHA256 = '3be90bf337f9a1a7c6afc05538a103decbbc2cbf004953e64adb68acc4f7b18f';
+    let isEditorMode = false;
+    let pendingEditorAction = null;
+    function clearLegacyLocalArticlesOnce() {
+      try {
+        if (localStorage.getItem(LEGACY_CLEANUP_KEY) !== 'done') {
+          localStorage.removeItem(STORE_KEY);
+          localStorage.setItem(LEGACY_CLEANUP_KEY, 'done');
+        }
+      } catch {}
+    }
+    clearLegacyLocalArticlesOnce();
+    const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80';
+    const CATEGORY_NAMES = { news: 'חדשות', sports: 'ספורט', opinions: 'דעות וטורים', culture: 'תרבות ופנאי' };
+    let allArticles = [];
+    let selectedCategory = 'all';
+    let isDemoMode = true;
+    let db = null;
+    let auth = null;
+    let appId = 'alpha-net-school';
+    let toastTimer = null;
+    let editingArticleId = null;
+    let editingArticleOriginalImage = null;
+
+    function escapeHtml(value='') {
+      return String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+    }
+    function safeImageUrl(value) {
+      if (typeof value === 'string' && /^data:image\/(jpeg|png|webp);base64,/i.test(value)) return value;
+      try { const url = new URL(value || FALLBACK_IMAGE, location.href); return ['http:','https:'].includes(url.protocol) ? url.href : FALLBACK_IMAGE; }
+      catch { return FALLBACK_IMAGE; }
+    }
+    async function compressImageFile(file) {
+      if (!file || !file.type.startsWith('image/')) throw new Error('יש לבחור קובץ תמונה תקין.');
+      if (file.size > 12 * 1024 * 1024) throw new Error('התמונה גדולה מדי. בחרו תמונה עד 12MB.');
+      const source = await new Promise((resolve, reject) => { const reader = new FileReader(); reader.onload = () => resolve(reader.result); reader.onerror = () => reject(new Error('לא ניתן לקרוא את קובץ התמונה.')); reader.readAsDataURL(file); });
+      const img = await new Promise((resolve, reject) => { const image = new Image(); image.onload = () => resolve(image); image.onerror = () => reject(new Error('קובץ התמונה לא תקין.')); image.src = source; });
+      const canvas = document.createElement('canvas');
+      const scale = Math.min(1, 1200 / img.width, 1200 / img.height);
+      canvas.width = Math.max(1, Math.round(img.width * scale)); canvas.height = Math.max(1, Math.round(img.height * scale));
+      const ctx = canvas.getContext('2d'); ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, canvas.width, canvas.height); ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      let quality = 0.78; let result = canvas.toDataURL('image/jpeg', quality);
+      while (result.length > 650000 && quality > 0.4) { quality -= 0.08; result = canvas.toDataURL('image/jpeg', quality); }
+      if (result.length > 850000) throw new Error('התמונה עדיין גדולה מדי לאחר דחיסה. נסו תמונה קטנה יותר.');
+      return result;
+    }
+    function getCategoryName(category) { return CATEGORY_NAMES[category] || 'כללי'; }
+    function formatDate(timestamp) {
+      if (!timestamp) return 'תאריך לא צוין';
+      const numeric = typeof timestamp === 'object' && timestamp?.toMillis ? timestamp.toMillis() : Number(timestamp);
+      if (!Number.isFinite(numeric)) return 'תאריך לא צוין';
+      return new Intl.DateTimeFormat('he-IL',{day:'numeric',month:'long',year:'numeric'}).format(new Date(numeric));
+    }
+    function getTimeValue(article) {
+      const val = article.createdAt;
+      if (val && typeof val === 'object' && val.toMillis) return val.toMillis();
+      return Number(val) || 0;
+    }
+    function sortArticles(articles) { return [...articles].sort((a,b) => getTimeValue(b)-getTimeValue(a)); }
+    function showToast(message) {
+      const toast = $('#toast'); toast.textContent = message; toast.classList.add('show');
+      clearTimeout(toastTimer); toastTimer = setTimeout(() => toast.classList.remove('show'), 3200);
+    }
+    function setStatus(message, type='error') {
+      const status = $('#admin-status'); status.textContent = message; status.className = `status show ${type}`;
+    }
+    function openModal(id) {
+      const modal = document.getElementById(id); if (!modal) return;
+      modal.classList.add('open'); document.body.style.overflow = 'hidden';
+      const firstInput = modal.querySelector('input,button,textarea,select'); if (firstInput) setTimeout(() => firstInput.focus(), 20);
+    }
+    function closeModal(id) {
+      const modal = document.getElementById(id); if (!modal) return;
+      modal.classList.remove('open'); if (!$('.modal-backdrop.open')) document.body.style.overflow = '';
+    }
+    function requestEditorAccess(action) {
+      if (isEditorMode) { action(); return; }
+      pendingEditorAction = action;
+      $('#editor-password').value = '';
+      $('#password-status').className = 'status';
+      $('#password-status').textContent = '';
+      openModal('password-modal');
+    }
+    function enterEditorMode() {
+      isEditorMode = true;
+      const buttonLabel = $('#open-editor .add-article-label');
+      if (buttonLabel) buttonLabel.textContent = 'מצב עריכה פעיל';
+      $('#open-editor').setAttribute('aria-label', 'מצב עריכה פעיל — לחצו כדי לפרסם כתבה');
+    }
+    function getHeroArticle(articles=allArticles) {
+      return articles.find(article => article.isFeatured === true || article.isFeatured === 'true') || articles[0] || null;
+    }
+    function renderTicker() {
+      const ticker = $('#ticker-content');
+      const latest = allArticles.slice(0,5);
+      if (!latest.length) { ticker.innerHTML = '<span class="ticker-empty">אין עדכונים כרגע — אפשר להציע את הכתבה הראשונה</span>'; return; }
+      ticker.innerHTML = [...latest,...latest].map(article => `<button type="button" class="ticker-item" data-open-article="${escapeHtml(article.id)}" style="border:0;background:transparent;color:inherit;font:inherit;cursor:pointer">${escapeHtml(article.title)}</button>`).join('');
+    }
+    function renderHero() {
+      const container = $('#hero-section');
+      const article = getHeroArticle();
+      if (!article) {
+        container.innerHTML = `<div class="hero-grid"><div class="hero-copy"><span class="hero-pill"><i class="ph ph-sparkle"></i> ברוכים הבאים לאלפא נט</span><h1>הסיפור של בית הספר מתחיל כאן</h1><p>שתפו יוזמות, הישגים ורעיונות. אלפא נט נותן במה לקולות ולקהילות שמרכיבים את בית הספר.</p><button class="primary-btn hero-cta" type="button" id="empty-hero-cta">פרסום כתבה ראשונה <i class="ph ph-arrow-left"></i></button></div><div class="hero-visual"><img src="${FALLBACK_IMAGE}" alt="תלמידים לומדים יחד" loading="lazy"><span class="hero-orb"></span></div></div>`;
+        $('#empty-hero-cta')?.addEventListener('click', () => requestEditorAccess(() => { resetEditorForNewArticle(); openModal('editor-modal'); }));
+        return;
+      }
+      container.innerHTML = `<div class="hero-grid"><div class="hero-copy"><span class="hero-pill"><i class="ph ph-star-four"></i> הסיפור המרכזי</span><h1>${escapeHtml(article.title)}</h1><p>${escapeHtml(article.subtitle || (article.content || '').slice(0,180) || 'הכתבה המרכזית של אלפא נט')}</p><div class="hero-meta"><span><i class="ph ph-tag"></i>${escapeHtml(getCategoryName(article.category))}</span><span><i class="ph ph-calendar-blank"></i>${escapeHtml(formatDate(getTimeValue(article)))}</span></div><button type="button" class="primary-btn hero-cta" data-open-article="${escapeHtml(article.id)}">לקריאת הכתבה <i class="ph ph-arrow-left"></i></button></div><div class="hero-visual"><img src="${escapeHtml(safeImageUrl(article.imageUrl))}" alt="${escapeHtml(article.title)}" onerror="this.onerror=null;this.src='${FALLBACK_IMAGE}'"><span class="hero-orb"></span></div></div>`;
+    }
+    function articleCard(article) {
+      const summary = article.subtitle || (article.content || '').slice(0,150) || 'פתחו את הכתבה לקריאה נוספת.';
+      return `<article class="article-card"><button type="button" class="article-card-button" data-open-article="${escapeHtml(article.id)}" aria-label="קריאת הכתבה: ${escapeHtml(article.title)}"><div class="article-image"><img src="${escapeHtml(safeImageUrl(article.imageUrl))}" alt="${escapeHtml(article.title)}" loading="lazy" onerror="this.onerror=null;this.src='${FALLBACK_IMAGE}'"><span class="image-label">${escapeHtml(getCategoryName(article.category))}</span></div><div class="article-body"><h3>${escapeHtml(article.title)}</h3><p>${escapeHtml(summary)}</p><div class="article-foot"><span><i class="ph ph-calendar-blank"></i> ${escapeHtml(formatDate(getTimeValue(article)))}</span><span class="read-more">לקריאה <i class="ph ph-arrow-left"></i></span></div></div></button><div class="article-manage"><span class="article-author">${article.authorName ? `מאת ${escapeHtml(article.authorName)}` : 'שם הכותב לא צוין'}</span><div class="article-manage-actions"><button type="button" class="edit-article-btn" data-edit-article="${escapeHtml(article.id)}"><i class="ph ph-pencil-simple"></i> עריכה</button><button type="button" class="delete-article-btn" data-delete-article="${escapeHtml(article.id)}"><i class="ph ph-trash"></i> מחיקה</button></div></div></article>`;
+    }
+    function emptyState(title, message) {
+      return `<div class="empty-state"><i class="ph ph-notebook" aria-hidden="true"></i><strong>${escapeHtml(title)}</strong><span>${escapeHtml(message)}</span></div>`;
+    }
+    function renderSideList(containerId, articles) {
+      const container = document.getElementById(containerId);
+      if (!articles.length) { container.innerHTML = '<div style="font-size:12px;color:#8791a7;line-height:1.7">אין כתבות במדור הזה עדיין. אפשר להיות הראשונים להציע כתבה.</div>'; return; }
+      container.innerHTML = articles.slice(0,4).map(article => `<div class="side-item"><button type="button" data-open-article="${escapeHtml(article.id)}" class="side-thumb" aria-label="קריאת ${escapeHtml(article.title)}"><img src="${escapeHtml(safeImageUrl(article.imageUrl))}" alt="" loading="lazy" onerror="this.onerror=null;this.src='${FALLBACK_IMAGE}'"></button><div><button type="button" data-open-article="${escapeHtml(article.id)}"><h4>${escapeHtml(article.title)}</h4><p>${escapeHtml(formatDate(getTimeValue(article)))}</p></button></div></div>`).join('');
+    }
+    function renderSite() {
+      allArticles = sortArticles(allArticles);
+      $('#loading-state').hidden = true; $('#content-container').hidden = false;
+      $('#demo-note').hidden = !isDemoMode;
+      renderTicker(); renderHero();
+      const query = $('#search-input').value.trim().toLocaleLowerCase('he');
+      const filtered = allArticles.filter(article => {
+        const matchCategory = selectedCategory === 'all' || article.category === selectedCategory;
+        const haystack = `${article.title || ''} ${article.subtitle || ''} ${article.content || ''} ${getCategoryName(article.category)}`.toLocaleLowerCase('he');
+        return matchCategory && (!query || haystack.includes(query));
+      });
+      $('#result-summary').textContent = query ? `נמצאו ${filtered.length} כתבות שמתאימות לחיפוש` : selectedCategory === 'all' ? 'הסיפורים החדשים בקהילה שלנו' : `כתבות במדור ${getCategoryName(selectedCategory)}`;
+      $('#news-grid').innerHTML = filtered.length ? filtered.map(articleCard).join('') : emptyState(query ? 'לא נמצאו תוצאות' : 'עוד אין כאן כתבות', query ? 'נסו מילות חיפוש אחרות או בחרו מדור אחר.' : 'אפשר להציע כתבה ראשונה ולהתחיל את הסיפור.');
+      const hero = getHeroArticle();
+      renderSideList('opinions-list', allArticles.filter(article => article.category === 'opinions' && article.id !== hero?.id));
+      renderSideList('culture-list', allArticles.filter(article => article.category === 'culture' && article.id !== hero?.id));
+    }
+    function openArticle(id) {
+      const article = allArticles.find(item => String(item.id) === String(id)); if (!article) return;
+      $('#reader-content').innerHTML = `<img class="article-reader-image" src="${escapeHtml(safeImageUrl(article.imageUrl))}" alt="${escapeHtml(article.title)}" onerror="this.onerror=null;this.src='${FALLBACK_IMAGE}'"><span class="reader-category">${escapeHtml(getCategoryName(article.category))}</span><h1 class="reader-title" id="reader-title">${escapeHtml(article.title)}</h1>${article.subtitle ? `<p class="reader-subtitle">${escapeHtml(article.subtitle)}</p>` : ''}<div class="reader-meta"><i class="ph ph-calendar-blank"></i>${escapeHtml(formatDate(getTimeValue(article)))}${article.authorName ? ` · ${escapeHtml(article.authorName)}` : ''}</div><div class="reader-content">${escapeHtml(article.content || article.subtitle || 'לא נוסף תוכן מלא לכתבה זו.')}</div><div class="reader-actions" style="gap:8px;flex-wrap:wrap"><button type="button" class="edit-article-btn" data-edit-article="${escapeHtml(article.id)}"><i class="ph ph-pencil-simple"></i> עריכת הכתבה</button><button type="button" class="delete-article-btn" data-delete-article="${escapeHtml(article.id)}"><i class="ph ph-trash"></i> מחיקת הכתבה</button></div>`;
+      openModal('reader-modal');
+    }
+    function readStoredArticles() {
+      try { const saved = JSON.parse(localStorage.getItem(STORE_KEY) || 'null'); return Array.isArray(saved) ? saved : null; }
+      catch { return null; }
+    }
+    function useDemoMode() {
+      isDemoMode = true; db = null; auth = null;
+      // Start empty: sample stories are intentionally not inserted or restored.
+      allArticles = readStoredArticles() || [];
+      $('#loading-state').hidden = true; renderSite();
+    }
+    async function initApp() {
+      $('#today-date').textContent = new Intl.DateTimeFormat('he-IL',{weekday:'long',day:'numeric',month:'long'}).format(new Date());
+      $('#current-year').textContent = new Date().getFullYear();
+      try {
+        const configRaw = typeof __firebase_config !== 'undefined' ? __firebase_config : null;
+        const config = typeof configRaw === 'string' ? JSON.parse(configRaw) : configRaw;
+        appId = typeof __app_id !== 'undefined' ? __app_id : 'alpha-net-school';
+        if (!config || !config.apiKey || !config.projectId) { useDemoMode(); return; }
+        const [appModule, authModule, firestoreModule] = await Promise.all([
+          import('https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js'),
+          import('https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js'),
+          import('https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js')
+        ]);
+        ({ initializeApp } = appModule);
+        ({ getAuth, signInAnonymously, signInWithCustomToken } = authModule);
+        ({ getFirestore, collection, addDoc, onSnapshot, doc, updateDoc, deleteDoc } = firestoreModule);
+        const app = initializeApp(config); db = getFirestore(app); auth = getAuth(app);
+        const token = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+        if (token) await signInWithCustomToken(auth, token); else await signInAnonymously(auth);
+        isDemoMode = false;
+        const articlesRef = collection(db,'artifacts',appId,'public','data','articles');
+        // Never seed placeholder articles into an empty database.
+        onSnapshot(articlesRef, snapshot => {
+          allArticles = snapshot.docs.map(doc => ({id:doc.id,...doc.data()}));
+          renderSite();
+        }, error => {
+          console.error('Firebase read error:', error); useDemoMode(); showToast('לא ניתן לטעון את הכתבות מהשרת. האתר עבר למצב הדגמה.');
+        });
+      } catch (error) {
+        console.error('Initialization error:', error); useDemoMode();
+        showToast('לא ניתן להתחבר לשרת. האתר מוצג במצב הדגמה.');
+      }
+    }
+    async function saveArticle(article, articleId = null) {
+      if (articleId) {
+        if (isDemoMode || !db || !auth?.currentUser) {
+          const index = allArticles.findIndex(item => String(item.id) === String(articleId));
+          if (index < 0) throw new Error('לא מצאתי את הכתבה לעריכה. ייתכן שהיא נמחקה.');
+          allArticles[index] = {...allArticles[index], ...article, id: allArticles[index].id};
+          allArticles = sortArticles(allArticles);
+          try { localStorage.setItem(STORE_KEY, JSON.stringify(allArticles)); }
+          catch { throw new Error('אין אפשרות לשמור בדפדפן הזה. בדקו את הגדרות האחסון.'); }
+          renderSite(); return;
+        }
+        const articleRef = doc(db,'artifacts',appId,'public','data','articles',String(articleId));
+        await updateDoc(articleRef, article);
+        return;
+      }
+      if (isDemoMode || !db || !auth?.currentUser) {
+        const newArticle = {...article,id:`local-${Date.now()}-${Math.random().toString(36).slice(2,7)}`};
+        allArticles = sortArticles([newArticle,...allArticles]);
+        try { localStorage.setItem(STORE_KEY, JSON.stringify(allArticles)); }
+        catch { throw new Error('אין אפשרות לשמור בדפדפן הזה. בדקו את הגדרות האחסון.'); }
+        renderSite(); return;
+      }
+      const articlesRef = collection(db,'artifacts',appId,'public','data','articles');
+      await addDoc(articlesRef,{...article,authorId:auth.currentUser.uid});
+    }
+
+    async function deleteArticle(id) {
+      const article = allArticles.find(item => String(item.id) === String(id));
+      if (!article) { showToast('לא נמצאה הכתבה למחיקה. ייתכן שהיא כבר נמחקה.'); return; }
+      const confirmed = window.confirm(`למחוק לצמיתות את הכתבה "${article.title}"? לא ניתן לבטל את הפעולה.`);
+      if (!confirmed) return;
+      try {
+        if (isDemoMode || !db || !auth?.currentUser || String(id).startsWith('local-')) {
+          const updatedArticles = allArticles.filter(item => String(item.id) !== String(id));
+          try { localStorage.setItem(STORE_KEY, JSON.stringify(updatedArticles)); }
+          catch { throw new Error('לא ניתן לשמור את המחיקה בדפדפן. בדקו את הגדרות האחסון.'); }
+          allArticles = updatedArticles;
+          renderSite();
+        } else {
+          const articleRef = doc(db, 'artifacts', appId, 'public', 'data', 'articles', String(id));
+          await deleteDoc(articleRef);
+          // The live Firestore listener refreshes the article list after deletion.
+        }
+        closeModal('reader-modal');
+        showToast('הכתבה נמחקה בהצלחה');
+      } catch (error) {
+        console.error('Error deleting article:', error);
+        const message = error?.code === 'permission-denied'
+          ? 'אין הרשאה למחוק את הכתבה ב-Firebase. צריך לעדכן את כללי האבטחה.'
+          : (error.message || 'מחיקת הכתבה נכשלה. נסו שוב.');
+        showToast(message);
+      }
+    }
+
+    function resetEditorForNewArticle() {
+      editingArticleId = null;
+      editingArticleOriginalImage = null;
+      $('#add-article-form').reset();
+      $('#image-preview-wrap').hidden = true;
+      $('#image-preview').removeAttribute('src');
+      $('#editor-title').innerHTML = '<i class="ph ph-note-pencil" style="color:var(--blue)"></i> פרסום כתבה חדשה';
+      $('#submit-btn').innerHTML = '<i class="ph ph-paper-plane-tilt"></i> פרסום כתבה';
+      $('#admin-status').className = 'status';
+    }
+
+    function editArticle(id) {
+      const article = allArticles.find(item => String(item.id) === String(id));
+      if (!article) { showToast('לא נמצאה הכתבה לעריכה.'); return; }
+      resetEditorForNewArticle();
+      editingArticleId = article.id;
+      editingArticleOriginalImage = article.imageUrl || FALLBACK_IMAGE;
+      $('#form-title').value = article.title || '';
+      $('#form-author-name').value = article.authorName || '';
+      $('#form-subtitle').value = article.subtitle || '';
+      $('#form-category').value = article.category || 'news';
+      $('#form-featured').value = (article.isFeatured === true || article.isFeatured === 'true') ? 'true' : 'false';
+      $('#form-content').value = article.content || '';
+      $('#image-preview').src = safeImageUrl(editingArticleOriginalImage);
+      $('#image-preview-wrap').hidden = false;
+      $('#editor-title').innerHTML = '<i class="ph ph-pencil-simple" style="color:var(--blue)"></i> עריכת כתבה';
+      $('#submit-btn').innerHTML = '<i class="ph ph-floppy-disk"></i> שמירת שינויים';
+      closeModal('reader-modal');
+      $('#admin-status').className = 'status';
+      openModal('editor-modal');
+    }
+
+    $('#open-editor').addEventListener('click',() => requestEditorAccess(() => { resetEditorForNewArticle(); openModal('editor-modal'); }));
+    $('#campus-submit').addEventListener('click',() => requestEditorAccess(() => { resetEditorForNewArticle(); openModal('editor-modal'); }));
+    $('#mobile-menu-btn').addEventListener('click',() => {
+      const nav = $('#nav-links'); const open = nav.classList.toggle('open'); $('#mobile-menu-btn').setAttribute('aria-expanded',String(open));
+      $('#mobile-menu-btn').innerHTML = open ? '<i class="ph ph-x"></i>' : '<i class="ph ph-list"></i>';
+    });
+    function applyCategory(category) {
+      selectedCategory = category || 'all';
+      $$('#category-filters .category-chip').forEach(chip => chip.classList.toggle('active', chip.dataset.category === selectedCategory));
+      renderSite();
+    }
+    $$('[data-nav-category]').forEach(link => link.addEventListener('click', event => {
+      event.preventDefault(); applyCategory(link.dataset.navCategory);
+      $$('#nav-links a').forEach(item => item.classList.toggle('active', item.dataset.navCategory === selectedCategory));
+      $('#nav-links').classList.remove('open'); $('#mobile-menu-btn').setAttribute('aria-expanded','false'); $('#mobile-menu-btn').innerHTML='<i class="ph ph-list"></i>';
+      $('#all-news').scrollIntoView({behavior:'smooth',block:'start'});
+    }));
+    $$('[data-nav-home]').forEach(link => link.addEventListener('click', () => {
+      applyCategory('all'); $$('#nav-links a').forEach(item => item.classList.toggle('active', item.hasAttribute('data-nav-home')));
+      $('#nav-links').classList.remove('open'); $('#mobile-menu-btn').setAttribute('aria-expanded','false'); $('#mobile-menu-btn').innerHTML='<i class="ph ph-list"></i>';
+    }));
+    $('#search-box').addEventListener('click',() => { if (window.matchMedia('(max-width: 600px)').matches) { $('#search-box').classList.add('expanded'); $('#search-input').focus(); } });
+    $('#search-input').addEventListener('input',() => renderSite());
+    $('#category-filters').addEventListener('click',event => {
+      const button = event.target.closest('[data-category]'); if (!button) return;
+      selectedCategory = button.dataset.category; $$('#category-filters .category-chip').forEach(chip => chip.classList.toggle('active',chip === button)); renderSite();
+    });
+    document.addEventListener('click',event => {
+      const deleteBtn = event.target.closest('[data-delete-article]');
+      if (deleteBtn) { event.preventDefault(); const articleId = deleteBtn.dataset.deleteArticle; requestEditorAccess(() => deleteArticle(articleId)); return; }
+      const editBtn = event.target.closest('[data-edit-article]');
+      if (editBtn) { event.preventDefault(); const articleId = editBtn.dataset.editArticle; requestEditorAccess(() => editArticle(articleId)); return; }
+      const openBtn = event.target.closest('[data-open-article]'); if (openBtn) { openArticle(openBtn.dataset.openArticle); return; }
+      const closeBtn = event.target.closest('[data-close]'); if (closeBtn) closeModal(closeBtn.dataset.close);
+      if (event.target.classList?.contains('modal-backdrop')) closeModal(event.target.id);
+    });
+    document.addEventListener('keydown',event => { if (event.key === 'Escape') $$('.modal-backdrop.open').forEach(modal => closeModal(modal.id)); });
+
+    $('#form-image-file').addEventListener('change', async event => {
+      const file = event.target.files?.[0];
+      if (!file) { $('#image-preview-wrap').hidden = true; return; }
+      if (!file.type.startsWith('image/')) { setStatus('יש לבחור קובץ תמונה.'); event.target.value = ''; return; }
+      $('#image-preview').src = URL.createObjectURL(file);
+      $('#image-preview-wrap').hidden = false;
+      $('#admin-status').className = 'status';
+    });
+    $('#remove-image-btn').addEventListener('click', () => {
+      $('#form-image-file').value = ''; editingArticleOriginalImage = FALLBACK_IMAGE; $('#image-preview').src = FALLBACK_IMAGE; $('#image-preview-wrap').hidden = false;
+    });
+
+    $('#editor-password-form').addEventListener('submit', async event => {
+      event.preventDefault();
+      const submitButton = $('#editor-password-form button[type="submit"]');
+      const status = $('#password-status');
+      // Normalize case and ignore spaces/separators before hashing.
+      const normalizePassword = value => String(value || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+      const enteredPassword = normalizePassword($('#editor-password').value);
+      submitButton.disabled = true;
+      try {
+        const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(enteredPassword));
+        const enteredHash = Array.from(new Uint8Array(digest), byte => byte.toString(16).padStart(2, '0')).join('');
+        if (enteredHash !== EDITOR_PASSWORD_SHA256) {
+          status.textContent = 'הסיסמה שגויה. נסו שוב.';
+          status.className = 'status show error';
+          $('#editor-password').select();
+          return;
+        }
+        enterEditorMode();
+        closeModal('password-modal');
+        const action = pendingEditorAction;
+        pendingEditorAction = null;
+        showToast('מצב עריכה הופעל בהצלחה');
+        if (typeof action === 'function') action();
+      } catch (error) {
+        console.error('Password verification failed:', error);
+        status.textContent = 'לא ניתן לאמת את הסיסמה בדפדפן הזה. יש לפתוח את האתר באמצעות HTTPS ולנסות שוב.';
+        status.className = 'status show error';
+      } finally {
+        submitButton.disabled = false;
+      }
+    });
+
+    $('#add-article-form').addEventListener('submit',async event => {
+      event.preventDefault();
+      if (!isEditorMode) {
+        requestEditorAccess(() => { showToast('מצב עריכה הופעל. אפשר ללחוץ שוב על פרסום הכתבה.'); });
+        return;
+      }
+      const articleForm = event.currentTarget;
+      const button = $('#submit-btn'); const data = new FormData(event.currentTarget);
+      const title = String(data.get('title') || '').trim(); const authorName = String(data.get('authorName') || '').trim(); const subtitle = String(data.get('subtitle') || '').trim();
+      const content = String(data.get('content') || '').trim(); const category = String(data.get('category') || 'news');
+      const imageFile = $('#form-image-file').files?.[0];
+      if (!title || !authorName || !content) { setStatus('צריך למלא שם כותב, כותרת ותוכן כתבה.'); return; }
+      const wasEditing = Boolean(editingArticleId);
+      button.disabled = true; button.innerHTML = '<span class="spinner" style="width:16px;height:16px;border-width:2px;border-color:#aebfff;border-top-color:#fff"></span> ' + (wasEditing ? 'שומרים שינויים...' : 'מפרסמים...');
+      try {
+        let imageUrl = imageFile ? await compressImageFile(imageFile) : (wasEditing ? (editingArticleOriginalImage || FALLBACK_IMAGE) : FALLBACK_IMAGE);
+        const article = {title,authorName,subtitle,content,category,isFeatured:data.get('featured') === 'true',imageUrl,createdAt:wasEditing ? getTimeValue(allArticles.find(item => String(item.id) === String(editingArticleId)) || {}) : Date.now()};
+        await saveArticle(article, editingArticleId); setStatus(wasEditing ? 'השינויים נשמרו בהצלחה!' : 'הכתבה פורסמה בהצלחה!', 'success'); showToast(wasEditing ? 'הכתבה עודכנה באלפא נט' : 'הכתבה פורסמה באלפא נט');
+        setTimeout(() => { closeModal('editor-modal'); resetEditorForNewArticle(); },900);
+      } catch (error) { console.error(error); setStatus(error.message || 'לא הצלחנו לפרסם את הכתבה. נסו שוב.'); }
+      finally { button.disabled = false; button.innerHTML = editingArticleId ? '<i class="ph ph-floppy-disk"></i> שמירת שינויים' : '<i class="ph ph-paper-plane-tilt"></i> פרסום כתבה'; }
+    });
+
+    initApp();
+  </script>
+</body>
+</html>
